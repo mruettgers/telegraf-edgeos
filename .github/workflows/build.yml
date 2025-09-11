@@ -38,11 +38,11 @@ jobs:
           cache: false
           go-version: "1.24"
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: telegraf-edgeos
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: telegraf
           repository: influxdb/telegraf
@@ -100,11 +100,11 @@ jobs:
           cache: false
           go-version: "1.24"
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: telegraf-edgeos
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: telegraf
           repository: influxdb/telegraf
