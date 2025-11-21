@@ -64,15 +64,9 @@ jobs:
         run: |
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/DEBIAN
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/bin
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/default
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/telegraf/telegraf.d
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/lib/systemd/system
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/sudoers.d/
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/lib/telegraf
-          touch telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/default/telegraf
-          cp telegraf-edgeos/configs/telegraf.conf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/telegraf/telegraf.conf
           cp telegraf-edgeos/configs/telegraf.service telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/lib//systemd/system/telegraf.service
-          cp telegraf-edgeos/configs/99telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/etc/sudoers.d/99telegraf
           cp telegraf/telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/bin/telegraf
           cp -r telegraf-edgeos/plugins/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/lib/telegraf/
           cp -r telegraf-edgeos/packaging/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/DEBIAN
@@ -126,15 +120,9 @@ jobs:
         run: |
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/DEBIAN
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/bin
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/default
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/telegraf/telegraf.d
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/lib/systemd/system
-          mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/sudoers.d/
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/lib/telegraf
-          touch telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/default/telegraf
-          cp telegraf-edgeos/configs/telegraf.conf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/telegraf/telegraf.conf
           cp telegraf-edgeos/configs/telegraf.service telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/lib//systemd/system/telegraf.service
-          cp telegraf-edgeos/configs/99telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/etc/sudoers.d/99telegraf
           cp telegraf/telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/bin/telegraf
           cp -r telegraf-edgeos/plugins/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/lib/telegraf/
           cp -r telegraf-edgeos/packaging/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/DEBIAN
