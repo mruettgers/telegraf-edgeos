@@ -68,7 +68,6 @@ jobs:
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/lib/telegraf
           cp telegraf-edgeos/configs/telegraf.service telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/lib//systemd/system/telegraf.service
           cp telegraf/telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/bin/telegraf
-          cp -r telegraf-edgeos/plugins/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/usr/lib/telegraf/
           cp -r telegraf-edgeos/packaging/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/DEBIAN
           chmod 0755 telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/DEBIAN/preinst
           chmod 0755 telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mips/DEBIAN/postinst
@@ -124,7 +123,6 @@ jobs:
           mkdir -p telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/lib/telegraf
           cp telegraf-edgeos/configs/telegraf.service telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/lib//systemd/system/telegraf.service
           cp telegraf/telegraf telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/bin/telegraf
-          cp -r telegraf-edgeos/plugins/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/usr/lib/telegraf/
           cp -r telegraf-edgeos/packaging/* telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/DEBIAN
           chmod 0755 telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/DEBIAN/preinst
           chmod 0755 telegraf_${{ inputs.version }}-${{ inputs.build }}+${{ inputs.flavor }}_mipsel/DEBIAN/postinst
