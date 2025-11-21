@@ -35,5 +35,5 @@ jobs:
       outputs: outputs.socket_writer
       parsers: parsers.influx
       processors:
-      serializers:
+      serializers: serializers.json
   
