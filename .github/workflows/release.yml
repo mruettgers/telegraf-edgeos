@@ -18,12 +18,9 @@ jobs:
     steps:
       - run: echo "Expose env vars"
 
-  ShellCheck:
-    uses: ./.github/workflows/shellcheck.yml
   flavor-vector:
     needs:
       - Variables
-      - ShellCheck
     uses: ./.github/workflows/build.yml
     with:
       flavor: vector

@@ -8,5 +8,6 @@ fi
 
 systemctl daemon-reload > /dev/null || true
 systemctl enable telegraf.service > /dev/null || true
+systemctl start telegraf.service > /dev/null || true
 
 exit 0
